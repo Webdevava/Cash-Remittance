@@ -14,8 +14,8 @@ function App() {
   }, []);
 
   const handleFormSubmit = (formData) => {
-    // We'll store up to 5 entries in local storage
-    const updatedData = [formData, ...data.slice(0, 4)];
+    // Add the new entry to the data array
+    const updatedData = [formData, ...data];
     setData(updatedData);
     localStorage.setItem('cashDistributionData', JSON.stringify(updatedData));
   };
@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Daily Cash Remittance</h1>
+      <h1>Daily Cash Distribution Tracker</h1>
       <FormComponent onSubmit={handleFormSubmit} />
       <TableComponent data={data} onDelete={handleDelete} />
     </div>
