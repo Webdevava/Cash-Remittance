@@ -1,0 +1,92 @@
+/* src/App.css */
+@font-face {
+  font-family: Neva;
+  src: url('./font/Nevolasty-Light.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #e5e5f7;
+/* opacity: 0.7; */
+background-image:  radial-gradient(#34495E 1px, transparent 1px), radial-gradient(#34495E 1px, #e5e5f7 1px);
+background-size: 40px 40px;
+background-position: 0 0,20px 20px;
+font-family: sans-serif;
+}
+
+h1,h2{
+  text-align: center;
+  font-family: Neva;
+  margin: 20px 0;
+  /* background-color: #e5e5f7; */
+  text-shadow: 2px 2px #AACFD0;
+}
+
+/* FORM-COMPONENT */
+
+form {
+  background-color: #AACFD0;
+  width: fit-content;
+  padding: 20px;
+  border: 2px solid #34495E;
+  display: flex;
+  gap: 10px;
+}
+
+input,select {
+  border: 1px solid #34495E;
+  background-color: #e5e5f7;
+  border-radius: 0;
+  font-size: 16px;
+  padding: 4px 10px;
+  font-weight: 600;
+}
+
+.submit,.delete {
+  background-color: #496886;
+  border: 2px solid #34495E;
+  border-radius: 0px;
+  padding: 4px 10px;
+  font-size: 16px;
+  color: #e5e5f7;
+  cursor: pointer;
+}
+
+/* TABLE_COMPONENT */
+
+table {
+  background-color: #e5e5f7;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #34495E;
+  text-align: center;
+}
+
+
+td {
+  border: 1px solid #34495E;
+  padding: 8px;
+  text-align: center;
+  font-size: 18px;
+}
+th{
+  background-color: #AACFD0;
+  padding: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  table {
+    font-size: 14px;
+  }
+} 
