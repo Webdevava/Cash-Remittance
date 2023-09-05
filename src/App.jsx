@@ -1,8 +1,9 @@
 // src/App.js
-import  { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import TableComponent from './TableComponent';
 import FormComponent from './FormComponent';
+import DownloadButton from './DownloadButton'; // Import the DownloadButton component
 
 function App() {
   const [data, setData] = useState([]);
@@ -32,6 +33,11 @@ function App() {
       <h1>Daily Cash Distribution Tracker</h1>
       <FormComponent onSubmit={handleFormSubmit} />
       <TableComponent data={data} onDelete={handleDelete} />
+      
+      {/* Render the DownloadButton component */}
+      <div className="download">
+      <DownloadButton data={data} />
+      </div>
     </div>
   );
 }

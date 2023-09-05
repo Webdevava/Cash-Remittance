@@ -33,6 +33,7 @@ const FormComponent = ({ onSubmit }) => {
                 type="date"
                 name="date"
                 value={formData.date}
+                placeholder="Date"
                 onChange={handleChange}
                 required
             />
@@ -65,6 +66,7 @@ const FormComponent = ({ onSubmit }) => {
                 name="timeOut"
                 value={formData.timeOut}
                 onChange={handleChange}
+                placeholder="time Out"
                 required
             />
             <input
@@ -73,6 +75,7 @@ const FormComponent = ({ onSubmit }) => {
                 name="timeIn"
                 value={formData.timeIn}
                 onChange={handleChange}
+                placeholder="time In"
                 required
             />
             <button type="submit" className="submit">
